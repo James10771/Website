@@ -1,20 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Main Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .search-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .search-box {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .results {
+            margin-top: 20px;
+        }
+        .result-item {
+            background-color: #f1f1f1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-top: 5px;
+        }
+        nav {
+            width: 100%;
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            background-color: #111;
+        }
+    </style>
 </head>
 <body>
-<h1>Welcome to the Main Page</h1>
-<nav>
-  <ul>
-    <li><a href="page1.html">Page 1</a></li>
-    <li><a href="page2.html">Page 2</a></li>
-    <li><a href="page3.html">Page 3</a></li>
-    <li><a href="page4.html">Page 4</a></li>
-    <li><a href="page5.html">Page 5</a></li>
-  </ul>
-</nav>
+    <nav>
+        <ul>
+            <li><a href="page1.html">Page 1</a></li>
+            <li><a href="page2.html">Page 2</a></li>
+            <li><a href="page3.html">Page 3</a></li>
+            <li><a href="page4.html">Page 4</a></li>
+            <li><a href="page5.html">Page 5</a></li>
+        </ul>
+    </nav>
+
+    <div class="search-container">
+        <h1>Custom Search</h1>
+        <input type="text" id="searchBox" class="search-box" placeholder="Search...">
+        <div id="results" class="results"></div>
+    </div>
+
+    <script>
+        const data = [
+            "Apple",
+            "Banana",
+            "Orange",
+            "Mango",
+            "Pineapple",
+            "Grapes",
+            "Strawberry",
+            "Blueberry",
+            "Blackberry",
+            "Raspberry"
+        ];
+
+        document.getElementById('searchBox').addEventListener('input', function() {
+            const query = this.value.toLowerCase();
+            const resultsContainer = document.getElementById('results');
+            resultsContainer.innerHTML = '';
+
+            if (query) {
+                const filteredResults = data.filter(item => item.toLowerCase().includes(query));
+                filteredResults.forEach(item => {
+                    const resultItem = document.createElement('div');
+                    resultItem.className = 'result-item';
+                    resultItem.textContent = item;
+                    resultsContainer.appendChild(resultItem);
+                });
+            }
+        });
+    </script>
 </body>
 </html>
