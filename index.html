@@ -1,133 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Search</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .search-container {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .search-box {
-            width: 300px;
-            padding: 10px;
-            font-size: 16px;
-        }
-        .results {
-            margin-top: 20px;
-        }
-        .result-item {
-            background-color: #f1f1f1;
-            padding: 10px;
-            border: 1px solid #ddd;
-            margin-top: 5px;
-        }
-        .widgets {
-            display: flex;
-            justify-content: space-around;
-            width: 100%;
-            margin-top: 20px;
-        }
-        .widget {
-            width: 30%;
-            background-color: #f9f9f9;
-            padding: 10px;
-            border: 1px solid #ddd;
-        }
-        nav {
-            width: 100%;
-            background-color: #333;
-            overflow: hidden;
-            position: fixed;
-            bottom: 0;
-        }
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-        nav ul li {
-            display: inline;
-        }
-        nav ul li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-        nav ul li a:hover {
-            background-color: #111;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>James' Website</title>
+<style>
+  body { font-family: Arial, sans-serif; }
+  .container { width: 80%; margin: auto; }
+  header { text-align: center; }
+  .updates { background-color: #f0f0f0; padding: 20px; margin-top: 20px; }
+  .contact { background-color: #e0e0e0; padding: 20px; margin-top: 20px; }
+  .image-placeholder { width: 100%; height: 200px; background-color: #ddd; text-align: center; line-height: 200px; color: #333; }
+</style>
 </head>
 <body>
-    <div class="search-container">
-        <h1>Custom Search</h1>
-        <input type="text" id="searchBox" class="search-box" placeholder="Search...">
-        <div id="results" class="results"></div>
-    </div>
-
-    <div class="widgets">
-        <div class="widget" id="weatherWidget">
-            <h2>Weather</h2>
-            <p>Weather info will be displayed here.</p>
-        </div>
-        <div class="widget" id="newsWidget">
-            <h2>News</h2>
-            <p>News info will be displayed here.</p>
-        </div>
-        <div class="widget" id="youtubeWidget">
-            <h2>YouTube</h2>
-            <div>
-                <iframe width="100%" height="150" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div>
-                <iframe width="100%" height="150" src="https://www.youtube.com/embed/3JZ_D3ELwOQ" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>
-
-    <nav>
-        <ul>
-            <li><a href="page1.html">Page 1</a></li>
-            <li><a href="page2.html">Page 2</a></li>
-            <li><a href="page3.html">Page 3</a></li>
-            <li><a href="page4.html">Page 4</a></li>
-            <li><a href="page5.html">Page 5</a></li>
-        </ul>
-    </nav>
-
-    <script>
-        const data = [
-            "Apple",
-            "Banana",
-            "Orange",
-            "Mango",
-            "Pineapple",
-            "Grapes",
-            "Strawberry",
-            "Blueberry",
-            "Blackberry",
-            "Raspberry",
-            { name: "James Carter", info: "Born Feb 3rd 1999" }
-        ];
-
-        document.getElementById('searchBox').addEventListener('input', function() {
-            const query = this.value.toLowerCase();
-            const resultsContainer = document.getElementById('results');
-            resultsContainer.innerHTML = '';
-
-            if (query) {
-                const filteredResults = data.filter(item =>
+<div class="container">
+  <header>
+    <h1>James' Website</h1>
+  </header>
+  <section class="updates">
+    <h2>Updates</h2>
+    <p>Today I Created an addon for bedrock edition of mine-craft.</p>
+    <div class="image-placeholder">Picture Placeholder</div>
+  </section>
+  <section class="contact">
+    <h2>Contact Information</h2>
+    <p>Please reach out via email: james@example.com</p>
+  </section>
+</div>
+</body>
+</html>
