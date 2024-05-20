@@ -5,20 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>James' Website</title>
 <style>
-  body { font-family: Arial, sans-serif; }
-  @keyframes breatheAnimation {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-  }
-  .container { width: 80%; margin: auto; }
-  header {
+  /* Existing styles... */
+  .download-button {
+    display: block;
+    width: 200px;
+    padding: 10px;
+    margin: 20px auto;
     text-align: center;
-    animation: breatheAnimation 3s ease-in-out infinite;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
   }
-  .updates { background-color: #f0f0f0; padding: 20px; margin-top: 20px; }
-  .contact { background-color: #e0e0e0; padding: 20px; margin-top: 20px; }
-  .image-placeholder { width: 100%; height: 200px; background-color: #ddd; text-align: center; line-height: 200px; color: #333; }
+  .download-button:hover {
+    background-color: #0056b3;
+  }
 </style>
 </head>
 <body>
@@ -30,6 +31,14 @@
     <h2>Updates</h2>
     <p>Today I Created an addon for bedrock edition of mine-craft.</p>
     <div class="image-placeholder">Picture Placeholder</div>
+  </section>
+  <!-- Add this section for the download button -->
+  <section>
+    <a href="path/to/your/file.zip" download="Your_File_Name" class="download-button">Download File</a>
+  </section>
+  <!-- Assume this is where your video widget would be -->
+  <section class="video-widget">
+    <!-- Video widget code goes here -->
   </section>
   <section class="contact">
     <h2>Contact Information</h2>
